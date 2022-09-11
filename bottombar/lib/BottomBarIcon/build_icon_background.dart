@@ -2,18 +2,16 @@ import 'package:flutter/material.dart';
 
 class BuildIconBackground extends StatelessWidget {
   final double backgroundSize;
-  final Color iconBackgroundColor;
+  final Color iconBackgoundColor;
   final double barHeight;
   final double totalPadding;
-  final double iconBackgroundBorderRadius;
 
   const BuildIconBackground({
     required this.backgroundSize,
-    required this.iconBackgroundColor,
+    required this.iconBackgoundColor,
     required this.barHeight,
     Key? key,
     required this.totalPadding,
-    required this.iconBackgroundBorderRadius,
   }) : super(key: key);
 
   @override
@@ -30,8 +28,8 @@ class BuildIconBackground extends StatelessWidget {
           height: backgroundSize,
           width: backgroundSize,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(iconBackgroundBorderRadius),
-            color: iconBackgroundColor,
+            borderRadius: BorderRadius.circular(8),
+            color: iconBackgoundColor,
           ),
         ),
       ),

@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:bottombar/import.dart';
 
 class BuildIconButton extends StatelessWidget {
   final VoidCallback onPressed;
@@ -15,8 +14,6 @@ class BuildIconButton extends StatelessWidget {
   final Color barColor;
   final double bottomPadding;
   final double barHeight;
-  final double selectorHeight;
-  final double selectorWidth;
 
   double _bottomIconScale() => seletedIndex == index
       ? Tween<double>(begin: 1.0, end: 0.7)
@@ -62,8 +59,6 @@ class BuildIconButton extends StatelessWidget {
     required this.barHeight,
     Key? key,
     required this.horizontalPadding,
-    required this.selectorHeight,
-    required this.selectorWidth,
   }) : super(key: key);
 
   @override
@@ -75,15 +70,15 @@ class BuildIconButton extends StatelessWidget {
       onTap: onPressed,
       child: Container(
         width: maxElementWidth,
-        height: barHeight,
+        height: 60.h,
         color: Colors.transparent,
         child: Align(
           alignment: Alignment.center,
           child: Container(
-            height: selectorHeight,
-            width: selectorWidth,
+            height: 40.h,
+            width: 40.w,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(10.r),
               // color: const Color(0xfff0f0f0),
             ),
             child: Stack(

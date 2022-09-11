@@ -1,5 +1,5 @@
+import 'package:bottombar/BottomBarSelector/build_moving_selector.dart';
 import 'package:flutter/material.dart';
-import 'build_moving_selector.dart';
 
 class BuildMovingSelectorAnimation extends StatelessWidget {
   final AnimationController controller;
